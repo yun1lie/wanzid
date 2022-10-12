@@ -1,15 +1,22 @@
 <template>
   <div class="home">
     <daohang></daohang>
-    <h1>home</h1>
+    <div class="tittle">
+      <div class="tt"><router-link to="#">flower</router-link></div>
+      <div class="tt"><router-link to="#">Immortal flower</router-link></div>
+      <div class="tt"><router-link to="#">Cake</router-link></div>
+      <div class="tt">
+        <router-link to="#"
+          >A Complete Collection of Flower Language</router-link
+        >
+      </div>
+    </div>
     <div class="Riding-lantern">
       <!-- 轮播图 -->
       <div class="block">
-        <span class="demonstration">默认 Hover 指示器触发</span>
         <el-carousel height="480px">
           <el-carousel-item v-for="item in 3" :key="item">
-            {{item}}
-
+            {{ item }}
           </el-carousel-item>
         </el-carousel>
       </div>
@@ -21,15 +28,26 @@
 import daohang from "@/views/login/daohang.vue";
 export default {
   data() {
-    return {
-    };
+    return {};
   },
   components: { daohang },
 };
 </script>
 
 <style>
-.el-carousel__item h3 {
+.home .tittle {
+  margin-left: 20%;
+  display: flex;
+}
+.home .tittle .tt {
+  margin-left: 50px;
+  margin: 0 14px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 52px;
+  display: inline-block;
+}
+.home .el-carousel__item h3 {
   color: #475669;
   font-size: 14px;
   opacity: 0.75;
@@ -37,14 +55,14 @@ export default {
   margin: 0;
 }
 
-.el-carousel__item:nth-child(n) {
+.home .el-carousel__item:nth-child(n) {
   background-image: url("./pic/pic1.jpeg");
 }
 
-.el-carousel__item:nth-child(2n) {
+.home .el-carousel__item:nth-child(2n) {
   background-image: url("./pic/pic2.jpeg");
 }
-.el-carousel__item:nth-child(3n) {
+.home .el-carousel__item:nth-child(3n) {
   background-image: url("./pic/pic4.jpeg");
 }
 </style>
