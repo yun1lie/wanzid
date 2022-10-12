@@ -5,7 +5,6 @@
     <div class="Riding-lantern">
       <!-- 轮播图 -->
       <div class="block">
-        <span class="demonstration">默认 Hover 指示器触发</span>
         <el-carousel height="480px">
           <el-carousel-item v-for="item in 3" :key="item">
             {{item}}
