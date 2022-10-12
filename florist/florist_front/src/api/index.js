@@ -5,17 +5,16 @@ import requests from "./request";
 ///api/product/getBaseCategoryList   get 无参数
 
 export const reqCategoryList = () => {
-    //发请求
-    return requests({ url: "/", method: "get" });
+  //发请求
+  return requests({ url: "/", method: "get" });
 };
 
 //注册信息的填写
 export const requser = (data) => {
-    return requests({ url: "/requser", method: "post", data });
+  return requests({ url: "/requser", method: "post", data });
 };
-
 
 // 注册
 export const request = (data) => {
-    return requests({ url: "/" })
-}
+  return requests({ url: "/user/save", method: "post", data });
+};

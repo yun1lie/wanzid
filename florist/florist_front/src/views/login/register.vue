@@ -6,22 +6,22 @@
         <div class="regform">
           <h3>register</h3>
           <el-form ref="form" :model="form" label-width="150px" :rules="rules">
-            <el-form-item label="username:" prop="username">
+            <el-form-item label="name:" prop="name">
               <el-input
-                v-model="form.username"
+                v-model="form.name"
                 placeholder="Please enter user name"
               ></el-input>
             </el-form-item>
-            <el-form-item label="password:" prop="userpwd">
+            <el-form-item label="password:" prop="password">
               <el-input
-                v-model="form.userpwd"
+                v-model="form.password"
                 placeholder="Please input password"
                 type="password"
               ></el-input>
             </el-form-item>
-            <el-form-item label="Confirm Password:" prop="reuserpwd">
+            <el-form-item label="Confirm Password:" prop="repassword">
               <el-input
-                v-model="form.reuserpwd"
+                v-model="form.repassword"
                 placeholder="Please Confirm Password"
                 type="password"
               ></el-input>
@@ -40,6 +40,7 @@
 
 <script>
 import daohang from "./daohang.vue";
+import { request } from "@/api";
 // import { Login } from "@/api";
 export default {
   components: { daohang },
@@ -48,14 +49,14 @@ export default {
     return {
       form: {
         username: "",
-        userpwd: "",
-        reuserpwd: "",
+        password: "",
+        repassword: "",
       },
       rules: {
-        username: [
+        name: [
           { required: true, message: "enter one user name", trigger: "blur" },
         ],
-        userpwd: [
+        password: [
           {
             required: true,
             message: "enter one user password",
@@ -67,7 +68,7 @@ export default {
             trigger: "blur",
           },
         ],
-        reuserpwd: [
+        repassword: [
           {
             required: true,
             message: "enter one user password",
@@ -101,13 +102,20 @@ export default {
   methods: {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
-        if (valid && this.form.userpwd == this.form.reuserpwd) {
+        if (valid && this.form.password == this.form.repassword) {
           alert("submit!");
+          var userInfo = {
+            username: this.form.name,
+            password: this.form.password,
+          };
+          // var userInfo = JSON.stringify(userInfo);
+          console.log(userInfo);
 
-          
-
-
+          request(userInfo).then((data) => {
+            console.log(data);
+          });
         } else {
+          alert("The user name and password entered twice are inconsistent");
           console.log("error submit!!");
           return false;
         }
