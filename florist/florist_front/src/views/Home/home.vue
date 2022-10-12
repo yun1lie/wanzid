@@ -6,9 +6,7 @@
       <div class="tt"><router-link to="#">Immortal flower</router-link></div>
       <div class="tt"><router-link to="#">Cake</router-link></div>
       <div class="tt">
-        <router-link to="#"
-          >A Complete Collection of Flower Language</router-link
-        >
+        <router-link to="#">A Complete Collection of Flower Language</router-link>
       </div>
     </div>
     <div class="Riding-lantern">
@@ -21,16 +19,25 @@
         </el-carousel>
       </div>
     </div>
-
-    <div class="card-list">
-      <!-- 商品显示 -->
-      <div class="card">
-        <img src="./pic/flower1.jpg" alt="" />
-        <p>qian</p>
+    <div class="crad-list">
+      <div class="wz">
+        <h3>
+          <a class="a1" href="">爱情鲜花</a>
+        <span>送 · 让你怦然心动的人</span>
+        <router-link class="router1" to="#">更多</router-link>
+        </h3>
+        
       </div>
-      <div class="card"><img src="./pic/flower2.jpg" alt="" /></div>
-      <div class="card"><img src="./pic/flower3.jpg" alt="" /></div>
-      <div class="card"><img src="./pic/flower4.jpg" alt="" /></div>
+     <div class="card">
+      <div class="card1">
+          <div class="pic">
+              <img src="./pic/home_floor_lover.png" alt="">
+          </div>
+          <div>
+
+          </div>
+      </div>
+     </div>
     </div>
   </div>
 </template>
@@ -46,18 +53,40 @@ export default {
 </script>
 
 <style>
-.home .card-list {
-  margin: auto;
-  display: flex;
-  width: 80%;
+.wz{
+  float: left;
+  width: 100%;
+  height: auto;
+  margin-top:5%;
+  background-color:#F7F9FA;
 }
-.home .card-list .card img {
-  height: 240px;
+.wz .router1{
+  margin-left: 45%;
+  font-size:18px;
 }
-.home .card-list .card {
-  width: 20%;
-  height: 380px;
-  margin-left: 5%;
+.wz .router1:hover{
+  color:orange;
+}
+.wz .a1{
+  margin-left: 20%;
+  font-size: 25px;
+}
+
+.wz span{
+  padding-left: 15px;
+    margin-left: 16px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+    border-left: 1px solid #71797F;
+}
+.card{
+  height: 1000px;
+  background-color:#F7F9FA;
+  margin-bottom: 5%;
+}
+.pic{
+  margin-left: 20%;
 }
 .home .tittle {
   margin-left: 20%;
@@ -80,13 +109,17 @@ export default {
 }
 
 .home .el-carousel__item:nth-child(n) {
-  background-image: url("./pic/pic1.jpeg");
+  background-image: url("./pic/pic1.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .home .el-carousel__item:nth-child(2n) {
-  background-image: url("./pic/pic2.jpeg");
+  background-image: url("./pic/pic2.jpg");
+  background-repeat: no-repeat;
 }
 .home .el-carousel__item:nth-child(3n) {
-  background-image: url("./pic/pic4.jpeg");
+  background-image: url("./pic/pic3.jpg");
+  background-repeat: no-repeat;
 }
 </style>

@@ -1,42 +1,48 @@
 <template>
-  <div class="register">
-    <div class="registerpic">
-      <div class="regform">
-        <h3>register</h3>
-        <el-form ref="form" :model="form" label-width="150px" :rules="rules">
-          <el-form-item label="username:" prop="username">
-            <el-input
-              v-model="form.username"
-              placeholder="Please enter user name"
-            ></el-input>
-          </el-form-item>
-          <el-form-item label="password:" prop="userpwd">
-            <el-input
-              v-model="form.userpwd"
-              placeholder="Please input password"
-              type="password"
-            ></el-input>
-          </el-form-item>
-          <el-form-item label="Confirm Password:" prop="reuserpwd">
-            <el-input
-              v-model="form.reuserpwd"
-              placeholder="Please Confirm Password"
-              type="password"
-            ></el-input>
-          </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="submitForm('form')"
-              >register</el-button
-            >
-          </el-form-item>
-        </el-form>
+  <div>
+    <daohang></daohang>
+    <div class="register">
+      <div class="registerpic">
+        <div class="regform">
+          <h3>register</h3>
+          <el-form ref="form" :model="form" label-width="150px" :rules="rules">
+            <el-form-item label="username:" prop="username">
+              <el-input
+                v-model="form.username"
+                placeholder="Please enter user name"
+              ></el-input>
+            </el-form-item>
+            <el-form-item label="password:" prop="userpwd">
+              <el-input
+                v-model="form.userpwd"
+                placeholder="Please input password"
+                type="password"
+              ></el-input>
+            </el-form-item>
+            <el-form-item label="Confirm Password:" prop="reuserpwd">
+              <el-input
+                v-model="form.reuserpwd"
+                placeholder="Please Confirm Password"
+                type="password"
+              ></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="submitForm('form')"
+                >register</el-button
+              >
+            </el-form-item>
+          </el-form>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import daohang from "./daohang.vue";
 export default {
+  components: { daohang },
+
   data() {
     return {
       form: {
