@@ -5,7 +5,7 @@ Vue.use(VueRouter);
 
 import login from "@/views/login/login.vue";
 import register from "@/views/login/register.vue";
-import daohang from "@/views/login/daohang.vue";
+import Home from "@/views/Home/home.vue";
 
 const router = new VueRouter({
     routes: [{
@@ -17,8 +17,8 @@ const router = new VueRouter({
             component: register,
         },
         {
-            path: "/daohang",
-            component: daohang,
+            path: "/",
+            component: Home,
         },
     ],
 });
