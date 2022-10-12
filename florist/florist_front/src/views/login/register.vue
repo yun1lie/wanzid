@@ -83,24 +83,9 @@ export default {
       },
     };
   },
-  // methods: {
-  //   log() {
-  //     console.log(this.user);
-  //     Login(this.user).then((data) => {
-  //       console.log(data.data);
-  //       // 把登录信息存入session
-  //       sessionStorage.setItem("token", JSON.stringify(data.data));
-  //       if (data.data.state == "200") {
-  //         // 登录成功
-  //         this.$router.push("/UserHome");
-  //       } else {
-  //         alert("登录失败,请检查用户名和密码是否正确");
-  //       }
-  //     });
-  //   },
-  // },
   methods: {
     submitForm(formName) {
+      // 用户登录
       this.$refs[formName].validate((valid) => {
         if (valid && this.form.password == this.form.repassword) {
           alert("submit!");
@@ -112,7 +97,11 @@ export default {
           console.log(userInfo);
 
           request(userInfo).then((data) => {
-            console.log(data);
+            if (data.status == 200) {
+              alert("login was successful");
+              //跳转至登录页面
+              this.$router.push('/login');
+            }
           });
         } else {
           alert("The user name and password entered twice are inconsistent");
