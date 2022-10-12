@@ -1,34 +1,18 @@
 <template>
   <div class="TheNav">
-    
-    <div class="line"></div>
-    <el-menu
-      :default-active="activeIndex2"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-    >
-      <el-menu-item index="1" >处理中心</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">我的工作台</template>
-        <el-menu-item index="2-1">选项1</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
-        <el-submenu index="2-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="2-4-1">选项1</el-menu-item>
-          <el-menu-item index="2-4-2">选项2</el-menu-item>
-          <el-menu-item index="2-4-3">选项3</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="3" >消息中心</el-menu-item>
-      <el-menu-item index="4"
-        ><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item
-      >
-    </el-menu>
+    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+  <el-menu-item style="margin-left:60%" index="1" ><a href="https://www.ele.me" target="_blank">订单查询</a></el-menu-item>
+  <el-submenu index="2">
+    <template slot="title">客户服务</template>
+    <el-menu-item index="2-1"><a class="a1" href="https://www.ele.me" target="_blank">在线支付</a></el-menu-item>
+    <el-menu-item index="2-2"><a class="a1" href="https://www.ele.me" target="_blank">售后服务</a></el-menu-item>
+    <el-menu-item index="2-3"><a class="a1" href="https://www.ele.me" target="_blank">留言反馈</a></el-menu-item>
+  </el-submenu>
+  <el-menu-item index="3"><a href="https://www.ele.me" target="_blank">购物车</a></el-menu-item>
+  <el-menu-item index="4" style="margin-left:12%">您好，请先登录</el-menu-item>
+  <el-menu-item index="5" style="margin-left:-10px">注册</el-menu-item>
+</el-menu>
+<div class="line"></div>
   </div>
 </template>
 
@@ -48,4 +32,11 @@
   }
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+.a1{
+  color: black;
+}
+.a1:hover{
+  color: orange;
+}
+</style>
