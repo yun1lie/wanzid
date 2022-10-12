@@ -9,12 +9,18 @@ export const reqCategoryList = () => {
   return requests({ url: "/", method: "get" });
 };
 
-//注册信息的填写
-export const requser = (data) => {
-  return requests({ url: "/requser", method: "post", data });
-};
-
 // 注册
 export const request = (data) => {
   return requests({ url: "/user/save", method: "post", data });
+};
+
+//登录
+export const login = (data) => {
+  return requests({ url: "/user/login", method: "post", data });
+};
+
+
+//获取登录用户信息
+export const getUserInfo = (data) => {
+  return requests({ url: "/user/name", method: "post", data });
 };

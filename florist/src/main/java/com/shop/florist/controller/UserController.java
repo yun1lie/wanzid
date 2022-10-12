@@ -31,4 +31,26 @@ public class UserController {
         User user = new User();
         return userMapper.findAll();
     }
+
+    //删除
+    @DeleteMapping("delete/{id}")
+    public Integer delete(@PathVariable Integer id){
+        return userMapper.deleteById(id);
+    }
+
+    //按照用户姓名查询
+    @PostMapping("/name")
+    public List<User> findName(@RequestBody User user){
+        return userMapper.selectByName(user);
+    }
+
+
+    //用户登录
+    @PostMapping("/login")
+    public boolean userLogin(@RequestBody User user){
+        return userService.userLogin(user);
+    }
+
+
+
 }

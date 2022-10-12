@@ -10,5 +10,9 @@ spring:
 server:
   port: 5000
 
+mybatis:
+#  扫描所有mybatis文件
+  mapper-loations: classpath:mapper/*.xml
+
 
 
