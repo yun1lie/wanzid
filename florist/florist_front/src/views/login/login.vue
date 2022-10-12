@@ -1,4 +1,6 @@
 <template>
+ <div>
+  <daohang></daohang>
   <div class="login">
     <div class="longpic">
       <div class="loginform">
@@ -25,10 +27,13 @@
       </div>
     </div>
   </div>
+ </div>
 </template>
 
 <script>
+import daohang from './daohang.vue';
 export default {
+  components: { daohang },
   data() {
     return {
       form: {
