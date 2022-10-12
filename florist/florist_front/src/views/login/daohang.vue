@@ -1,7 +1,7 @@
 <template>
   <div class="TheNav">
     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-  <el-menu-item style="margin-left:60%" index="1" ><a href="https://www.ele.me" target="_blank">订单查询</a></el-menu-item>
+  <el-menu-item style="margin-left:55%" index="1" ><a href="https://www.ele.me" target="_blank">订单查询</a></el-menu-item>
   <el-submenu index="2">
     <template slot="title">客户服务</template>
     <el-menu-item index="2-1"><a class="a1" href="https://www.ele.me" target="_blank">在线支付</a></el-menu-item>
