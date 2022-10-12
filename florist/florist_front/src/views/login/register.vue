@@ -40,6 +40,7 @@
 
 <script>
 import daohang from "./daohang.vue";
+// import { Login } from "@/api";
 export default {
   components: { daohang },
 
@@ -81,11 +82,31 @@ export default {
       },
     };
   },
+  // methods: {
+  //   log() {
+  //     console.log(this.user);
+  //     Login(this.user).then((data) => {
+  //       console.log(data.data);
+  //       // 把登录信息存入session
+  //       sessionStorage.setItem("token", JSON.stringify(data.data));
+  //       if (data.data.state == "200") {
+  //         // 登录成功
+  //         this.$router.push("/UserHome");
+  //       } else {
+  //         alert("登录失败,请检查用户名和密码是否正确");
+  //       }
+  //     });
+  //   },
+  // },
   methods: {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid && this.form.userpwd == this.form.reuserpwd) {
           alert("submit!");
+
+          
+
+
         } else {
           console.log("error submit!!");
           return false;
