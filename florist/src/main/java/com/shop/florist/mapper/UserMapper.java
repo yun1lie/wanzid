@@ -13,4 +13,7 @@ public interface UserMapper {
     @Select("select * from users;")
     List<User> findAll();
 
+    @Select("INSERT INTO `florist`.`users`(`name`, `password`) VALUES (#{username}, #{password})")
+    Integer insert(User user);
+
 }
