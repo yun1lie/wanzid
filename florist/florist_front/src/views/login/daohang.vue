@@ -10,8 +10,8 @@
     <el-menu-item index="3-3"><a class="a1" href="https://www.ele.me" target="_blank">留言反馈</a></el-menu-item>
   </el-submenu>
   <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">购物车</a></el-menu-item>
-  <el-menu-item index="5" ><a class="a1" href="./login.vue" target="_blank">您好，请先登录</a></el-menu-item>
-  <el-menu-item index="6" style="margin-left:-10px"><a class="a1" href="./register.vue" target="_blank">注册</a></el-menu-item>
+  <el-menu-item index="5" ><router-link to="login">您好，请先登录</router-link></el-menu-item>
+  <el-menu-item index="6" style="margin-left:-10px"><router-link to="register">注册</router-link></el-menu-item>
 </el-menu>
 <div class="line"></div>
   </div>
