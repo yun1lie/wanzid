@@ -2,7 +2,8 @@
   <div class="register">
     <div class="registerpic">
       <div class="regform">
-        <el-form ref="form" :model="form" label-width="80px" :rules="rules">
+        <h3>register</h3>
+        <el-form ref="form" :model="form" label-width="150px" :rules="rules">
           <el-form-item label="username:" prop="username">
             <el-input
               v-model="form.username"
@@ -25,7 +26,7 @@
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="submitForm('form')"
-              >login</el-button
+              >register</el-button
             >
           </el-form-item>
         </el-form>
@@ -85,21 +86,23 @@ export default {
         }
       });
     },
-    
   },
 };
 </script>
 
 <style>
-.longpic {
+.registerpic {
   background-image: url("flowerpic.jpeg");
+  height: 470px;
 }
 .regform {
+  padding: 20px;
+  background-color: rgb(242 242 242 / 70%);
   position: relative;
   top: 50px;
-  margin-left: 70%;
-  width: 20%;
-  height: 300px;
+  margin-left: 65%;
+  width: 25%;
+  height: 310px;
   margin-top: 100px;
 }
 </style>
