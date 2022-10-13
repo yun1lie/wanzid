@@ -30,11 +30,18 @@
       </div>
      <div class="card">
       <div class="card1">
-          <div class="pic">
-              <img src="./pic/home_floor_lover.png" alt="">
-          </div>
-          <div>
-
+        <img class="pic" src="./pic/home_floor_lover.png" alt="">
+          <div class="jianshi">
+            <div class="grid-container">
+                <img src="./pic/1.jpg" alt="">
+                <div>2</div>
+                <div>3</div>  
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+              </div>
           </div>
       </div>
      </div>
@@ -68,7 +75,7 @@ export default {
   color:orange;
 }
 .wz .a1{
-  margin-left: 20%;
+  margin-left: 10%;
   font-size: 25px;
 }
 
@@ -81,12 +88,18 @@ export default {
     border-left: 1px solid #71797F;
 }
 .card{
+  width: 100%;
   height: 1000px;
   background-color:#F7F9FA;
   margin-bottom: 5%;
 }
+
+.jianshi{
+  display: inline-block;
+}
+
 .pic{
-  margin-left: 20%;
+  margin-left: 10%;
 }
 .home .tittle {
   margin-left: 20%;
