@@ -28,3 +28,8 @@ export const getUserInfo = (data) => {
 export const getFlower = () => {
   return requests({ url: "/flower/", method: "get" });
 };
+
+//获取用户购物车信息
+export const getUserCar = (data) => {
+  return requests({ url: "/ShopCart/", method: "post", data });
+};
