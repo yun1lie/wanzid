@@ -6,7 +6,6 @@
       :data="tableData"
       tooltip-effect="dark"
       style="width: 100%"
-
     >
       <el-table-column type="selection" width="55"> </el-table-column>
       <!-- <el-table-column  label="Trade name" width="120">
@@ -35,8 +34,8 @@
         </template>
       </el-table-column> -->
     </el-table>
-    <div>合计{{ this.sum }} 元</div>
-    <el-button>结算</el-button>
+    <div>total${{ this.sum }}</div>
+    <el-button>buy</el-button>
   </div>
 </template>
 
