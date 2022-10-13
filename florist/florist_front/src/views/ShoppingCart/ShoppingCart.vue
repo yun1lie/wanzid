@@ -38,8 +38,17 @@
 
 <script>
 import daohang from "@/views/login/daohang.vue";
+import { getUserCar } from "@/api";
 export default {
   components: { daohang },
+  created() {
+    if (sessionStorage.getItem("userInfo") != null) {
+      this.userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
+      getUserCar(this.userInfo).then((data) => {
+        console.log(data.data);
+      });
+    }
+  },
   data() {
     return {
       tableData: [
