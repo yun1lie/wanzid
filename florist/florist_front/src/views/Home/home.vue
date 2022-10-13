@@ -24,9 +24,9 @@
     <div class="crad-list">
       <div class="wz">
         <h3>
-          <a class="a1" href="">爱情鲜花</a>
-          <span>送 · 让你怦然心动的人</span>
-          <router-link class="router1" to="#">更多</router-link>
+          <router-link class="a1" to="#">Love with Flower</router-link>
+          <span>Give to the people you care about</span>
+          
         </h3>
       </div>
       <div class="card">
@@ -101,13 +101,7 @@ export default {
   margin-top: 5%;
   background-color: #f7f9fa;
 }
-.wz .router1 {
-  margin-left: 45%;
-  font-size: 18px;
-}
-.wz .router1:hover {
-  color: orange;
-}
+
 .wz .a1 {
   margin-left: 5%;
   font-size: 25px;
@@ -128,7 +122,13 @@ export default {
   margin-bottom: 5%;
 }
 
+.pic {
+  display: inline-block;
+  margin-left: 10%;
+}
+
 .jianshi {
+  width: 70%;
   display: inline-block;
 }
 .grid-container {
@@ -141,9 +141,6 @@ export default {
   height: 225px;
 }
 
-.pic {
-  margin-left: 5%;
-}
 .bj {
   float: left;
   margin-left: 4%;
