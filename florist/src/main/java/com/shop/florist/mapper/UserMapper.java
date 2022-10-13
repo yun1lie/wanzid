@@ -24,4 +24,8 @@ public interface UserMapper {
     //按照用户姓名查询
     @Select("select * from users where users.username = #{username}")
     List<User> selectByName(User user);
+
+    //查询管理员用户
+    @Select("select * from users where users.id = 0}")
+    List<User> selectAdmin(User user);
 }

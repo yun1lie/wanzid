@@ -7,6 +7,7 @@ import login from "@/views/login/login.vue";
 import register from "@/views/login/register.vue";
 import Home from "@/views/Home/home.vue";
 import ShoppingCart from "@/views/ShoppingCart/ShoppingCart.vue";
+import adminLogin from "@/views/admin/adminLogin.vue";
 
 const router = new VueRouter({
   routes: [
@@ -25,6 +26,10 @@ const router = new VueRouter({
     {
       path: "/ShoppingCart",
       component: ShoppingCart,
+    },
+    {
+      path: "/adminLogin",
+      component: adminLogin,
     },
   ],
 });
