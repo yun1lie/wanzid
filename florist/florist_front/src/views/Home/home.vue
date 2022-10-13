@@ -6,7 +6,9 @@
       <div class="tt"><router-link to="#">Immortal flower</router-link></div>
       <div class="tt"><router-link to="#">Cake</router-link></div>
       <div class="tt">
-        <router-link to="#">A Complete Collection of Flower Language</router-link>
+        <router-link to="#"
+          >A Complete Collection of Flower Language</router-link
+        >
       </div>
     </div>
     <div class="Riding-lantern">
@@ -23,74 +25,118 @@
       <div class="wz">
         <h3>
           <a class="a1" href="">爱情鲜花</a>
-        <span>送 · 让你怦然心动的人</span>
-        <router-link class="router1" to="#">更多</router-link>
+          <span>送 · 让你怦然心动的人</span>
+          <router-link class="router1" to="#">更多</router-link>
         </h3>
-        
       </div>
-     <div class="card">
-      <div class="card1">
-        <img class="pic" src="./pic/home_floor_lover.png" alt="">
+      <div class="card">
+        <div class="card1">
+          <img class="pic" src="./pic/home_floor_lover.png" alt="" />
           <div class="jianshi">
-              
+            <div class="grid-container">
+              <div v-for="i in this.flowerInfo" :key="i.id">
+                <div class="bj">
+                  <img class="img1" :src="i.picUrl" alt="">
+                    <div class="miaoshu">
+                      {{i.fname}}
+                      <div class="miaoshu" style="margin-top:5%;font-size:25px;">
+                      {{i.price}} 
+                    </div>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
-     </div>
     </div>
   </div>
 </template>
 
 <script>
 import daohang from "@/views/login/daohang.vue";
+import { getFlower } from "@/api";
 export default {
   data() {
-    return {};
+    return {
+      flowerInfo: [],
+    };
+  },
+  created() {
+    getFlower().then((data) => {
+      console.log(data.data);
+      this.flowerInfo = data.data;
+    });
   },
   components: { daohang },
 };
 </script>
 
 <style>
-.wz{
+.wz {
   float: left;
   width: 100%;
   height: auto;
-  margin-top:5%;
-  background-color:#F7F9FA;
+  margin-top: 5%;
+  background-color: #f7f9fa;
 }
-.wz .router1{
+.wz .router1 {
   margin-left: 45%;
-  font-size:18px;
+  font-size: 18px;
 }
-.wz .router1:hover{
-  color:orange;
+.wz .router1:hover {
+  color: orange;
 }
-.wz .a1{
+.wz .a1 {
   margin-left: 10%;
   font-size: 25px;
 }
 
-.wz span{
+.wz span {
   padding-left: 15px;
-    margin-left: 16px;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: normal;
-    border-left: 1px solid #71797F;
+  margin-left: 16px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: normal;
+  border-left: 1px solid #71797f;
 }
-.card{
+.card {
   width: 100%;
   height: 1000px;
-  background-color:#F7F9FA;
+  background-color: #f7f9fa;
   margin-bottom: 5%;
 }
 
-.jianshi{
+.jianshi {
   display: inline-block;
 }
+.grid-container{
+  /* display: inline-block; */
+  width: 1200px;
+}
+.img1{
+    margin-left: 10%;
+    width: 80%;
+    height: 225px
+}
 
-.pic{
+.pic {
   margin-left: 10%;
+}
+.bj {
+    float: left;
+    margin-left: 4%;
+    background-color: white;
+    height: 300px;
+    width: 17%;
+    margin-top: 2%;
+}
+.bj :hover{
+  color: orange;
+}
+.miaoshu{
+  text-align: center;
 }
 .home .tittle {
   margin-left: 20%;
@@ -114,7 +160,7 @@ export default {
 
 .home .el-carousel__item:nth-child(n) {
   background-image: url("./pic/pic1.jpg");
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 

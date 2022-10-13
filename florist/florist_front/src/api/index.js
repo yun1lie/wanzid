@@ -19,8 +19,12 @@ export const login = (data) => {
   return requests({ url: "/user/login", method: "post", data });
 };
 
-
 //获取登录用户信息
 export const getUserInfo = (data) => {
   return requests({ url: "/user/name", method: "post", data });
+};
+
+//获取首页8朵花
+export const getFlower = () => {
+  return requests({ url: "/flower/", method: "get" });
 };
