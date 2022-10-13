@@ -33,7 +33,8 @@
         <div class="card1">
           <img class="pic" src="./pic/home_floor_lover.png" alt="" />
           <div class="jianshi">
-            <div class="grid-container">
+            <router-link to="/xiangxi">
+              <div class="grid-container">
               <div v-for="i in this.flowerInfo" :key="i.id">
                 <div class="bj">
                   <img class="img1" :src="i.picUrl" alt="" />
@@ -49,6 +50,7 @@
                 </div>
               </div>
             </div>
+            </router-link>
           </div>
         </div>
       </div>

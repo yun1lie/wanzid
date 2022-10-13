@@ -1,6 +1,5 @@
 package com.shop.florist.mapper;
 
-
 import com.shop.florist.entity.Flower;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -16,3 +15,4 @@ public interface FlowerMapper {
     @Select("select * from flower where id = #{id}")
     Flower findById(Flower flower);
 }
+
