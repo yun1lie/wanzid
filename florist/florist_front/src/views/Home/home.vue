@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <daohang></daohang>
-    <div class="tittle">
+    <!-- <div class="tittle">
       <div class="tt"><router-link to="#">flower</router-link></div>
       <div class="tt"><router-link to="#">Immortal flower</router-link></div>
       <div class="tt"><router-link to="#">Cake</router-link></div>
@@ -10,7 +10,7 @@
           >A Complete Collection of Flower Language</router-link
         >
       </div>
-    </div>
+    </div> -->
     <div class="Riding-lantern">
       <!-- 轮播图 -->
       <div class="block">
@@ -36,14 +36,16 @@
             <div class="grid-container">
               <div v-for="i in this.flowerInfo" :key="i.id">
                 <div class="bj">
-                  <img class="img1" :src="i.picUrl" alt="">
-                    <div class="miaoshu">
-                      {{i.fname}}
-                      <div class="miaoshu" style="margin-top:5%;font-size:25px;">
-                      {{i.price}} 
+                  <img class="img1" :src="i.picUrl" alt="" />
+                  <div class="miaoshu">
+                    {{ i.fname }}
+                    <div
+                      class="miaoshu"
+                      style="margin-top: 5%; font-size: 25px"
+                    >
+                      {{ i.price }}
                     </div>
-                    </div>
-                    
+                  </div>
                 </div>
               </div>
             </div>
@@ -74,6 +76,24 @@ export default {
 </script>
 
 <style>
+.home .all {
+  width: 80%;
+  margin: auto;
+  height: 300px;
+  border: 1px red solid;
+  display: flex;
+}
+
+.home .all .left {
+  width: 20%;
+  height: 300px;
+  border: 1px red solid;
+}
+.home .all .right {
+  width: 80%;
+  height: 300px;
+  border: 1px blue solid;
+}
 .wz {
   float: left;
   width: 100%;
@@ -89,7 +109,7 @@ export default {
   color: orange;
 }
 .wz .a1 {
-  margin-left: 10%;
+  margin-left: 5%;
   font-size: 25px;
 }
 
@@ -111,31 +131,31 @@ export default {
 .jianshi {
   display: inline-block;
 }
-.grid-container{
+.grid-container {
   /* display: inline-block; */
   width: 1200px;
 }
-.img1{
-    margin-left: 10%;
-    width: 80%;
-    height: 225px
+.img1 {
+  margin-left: 10%;
+  width: 80%;
+  height: 225px;
 }
 
 .pic {
-  margin-left: 10%;
+  margin-left: 5%;
 }
 .bj {
-    float: left;
-    margin-left: 4%;
-    background-color: white;
-    height: 300px;
-    width: 17%;
-    margin-top: 2%;
+  float: left;
+  margin-left: 4%;
+  background-color: white;
+  height: 300px;
+  width: 17%;
+  margin-top: 2%;
 }
-.bj :hover{
+.bj :hover {
   color: orange;
 }
-.miaoshu{
+.miaoshu {
   text-align: center;
 }
 .home .tittle {

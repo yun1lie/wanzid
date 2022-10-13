@@ -9,10 +9,10 @@
       <el-menu-item index="1" style="margin-left: 5%">
         <router-link to="/">首页</router-link>
       </el-menu-item>
-      <el-menu-item style="margin-left: 55%" index="2"
+      <!-- <el-menu-item style="margin-left: 55%" index="2"
         ><a href="https://www.ele.me" target="_blank">订单查询</a></el-menu-item
-      >
-      <el-submenu index="3">
+      > -->
+      <!-- <el-submenu index="3" style="float:right">
         <template slot="title">客户服务</template>
         <el-menu-item index="3-1"
           ><a class="a1" href="https://www.ele.me" target="_blank"
@@ -29,21 +29,21 @@
             >留言反馈</a
           ></el-menu-item
         >
-      </el-submenu>
-      <el-menu-item index="4">
+      </el-submenu> -->
+      <el-menu-item index="4" v-if="userInfo != ''" style="float:right">
         <router-link to="/ShoppingCart">Shopping Cart</router-link>
 
         <!-- <a href="https://www.ele.me" target="_blank"></a> -->
       </el-menu-item>
-      <el-menu-item v-if="userInfo == ''" index="5"
-        ><router-link to="login">您好，请先登录</router-link></el-menu-item
+      <el-menu-item v-if="userInfo == ''" index="5" style="float:right"
+        ><router-link to="login">please login</router-link></el-menu-item
       >
-      <el-menu-item v-if="userInfo != ''" index="5"
+      <el-menu-item v-if="userInfo != ''" index="5" style="float:right"
         ><router-link to="#">{{ userInfo.username }}</router-link></el-menu-item
       >
 
-      <el-menu-item index="6" v-if="userInfo == ''" style="margin-left: -10px"
-        ><router-link to="register">注册</router-link></el-menu-item
+      <el-menu-item index="6" v-if="userInfo == ''" style="float:right"
+        ><router-link to="register">register</router-link></el-menu-item
       >
     </el-menu>
     <div class="line"></div>
