@@ -96,8 +96,9 @@ export default {
 
 <style>
 .longpic {
-  background-image: url("flowerpic.jpeg");
+  background-image: url("login.jpg");
   height: 400px;
+  background-position: center 68%;
 }
 .loginform {
   padding: 20px;

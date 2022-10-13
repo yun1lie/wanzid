@@ -32,16 +32,7 @@
       <div class="card1">
         <img class="pic" src="./pic/home_floor_lover.png" alt="">
           <div class="jianshi">
-            <div class="grid-container">
-                <img src="./pic/1.jpg" alt="">
-                <div>2</div>
-                <div>3</div>  
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-                <div>8</div>
-              </div>
+              
           </div>
       </div>
      </div>
