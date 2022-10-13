@@ -46,6 +46,7 @@ export default {
       this.userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
       getUserCar(this.userInfo).then((data) => {
         console.log(data.data);
+        this.tableData = data.data;
       });
     }
   },
