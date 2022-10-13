@@ -7,8 +7,8 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
-    //    数据库查询接口
 
+    //    数据库查询接口
     @Select("select * from users;")
     List<User> findAll();
 
