@@ -116,8 +116,9 @@ export default {
 
 <style>
 .registerpic {
-  background-image: url("flowerpic.jpeg");
+  background-image: url("login.jpg");
   height: 470px;
+  background-position: center 68%;
 }
 .regform {
   padding: 20px;

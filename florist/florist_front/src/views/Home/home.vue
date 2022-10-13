@@ -34,18 +34,18 @@
           <img class="pic" src="./pic/home_floor_lover.png" alt="" />
           <div class="jianshi">
             <div class="grid-container">
-              <img src="./pic/1.jpg" alt="" />
               <div v-for="i in this.flowerInfo" :key="i.id">
-                <img :src="i.picUrl" alt="">
-                {{i}}
+                <div class="bj">
+                  <img class="img1" :src="i.picUrl" alt="">
+                    <div class="miaoshu">
+                      {{i.fname}}
+                      <div class="miaoshu" style="margin-top:5%;font-size:25px;">
+                      {{i.price}} 
+                    </div>
+                    </div>
+                    
+                </div>
               </div>
-              <div>2</div>
-              <div>3</div>
-              <div>4</div>
-              <div>5</div>
-              <div>6</div>
-              <div>7</div>
-              <div>8</div>
             </div>
           </div>
         </div>
@@ -111,9 +111,32 @@ export default {
 .jianshi {
   display: inline-block;
 }
+.grid-container{
+  /* display: inline-block; */
+  width: 1200px;
+}
+.img1{
+    margin-left: 10%;
+    width: 80%;
+    height: 225px
+}
 
 .pic {
   margin-left: 10%;
+}
+.bj {
+    float: left;
+    margin-left: 4%;
+    background-color: white;
+    height: 300px;
+    width: 17%;
+    margin-top: 2%;
+}
+.bj :hover{
+  color: orange;
+}
+.miaoshu{
+  text-align: center;
 }
 .home .tittle {
   margin-left: 20%;
