@@ -34,23 +34,32 @@ public class UserController {
 
     //删除
     @DeleteMapping("delete/{id}")
-    public Integer delete(@PathVariable Integer id){
+    public Integer delete(@PathVariable Integer id) {
         return userMapper.deleteById(id);
     }
 
     //按照用户姓名查询
     @PostMapping("/name")
-    public List<User> findName(@RequestBody User user){
+    public List<User> findName(@RequestBody User user) {
         return userMapper.selectByName(user);
     }
 
 
     //用户登录
     @PostMapping("/login")
-    public boolean userLogin(@RequestBody User user){
+    public boolean userLogin(@RequestBody User user) {
         return userService.userLogin(user);
     }
 
+    //管理员用户
+    @PostMapping("/adminLogin")
+    public boolean adminLogin(@RequestBody User user) {
+        User user2 = userMapper.selectAdmin(user).get(0);
+        if (user.getPassword().equals(user2.getPassword()) && user.getUsername().equals(user2.getUsername())) {
+            return true;
+        }
+        return false;
+    }
 
 
 }
