@@ -6,9 +6,9 @@
       mode="horizontal"
       @select="handleSelect"
     >
-      <el-menu-item index="1" style="margin-left: 5%"
-        ><a href="../Home/home.vue" target="_blank">首页</a></el-menu-item
-      >
+      <el-menu-item index="1" style="margin-left: 5%">
+        <router-link to="/">首页</router-link>
+      </el-menu-item>
       <el-menu-item style="margin-left: 55%" index="2"
         ><a href="https://www.ele.me" target="_blank">订单查询</a></el-menu-item
       >
@@ -30,16 +30,16 @@
           ></el-menu-item
         >
       </el-submenu>
-      <el-menu-item index="4"
-        ><a href="https://www.ele.me" target="_blank">购物车</a></el-menu-item
-      >
+      <el-menu-item index="4">
+        <router-link to="/ShoppingCart">Shopping Cart</router-link>
+
+        <!-- <a href="https://www.ele.me" target="_blank"></a> -->
+      </el-menu-item>
       <el-menu-item v-if="userInfo == ''" index="5"
         ><router-link to="login">您好，请先登录</router-link></el-menu-item
       >
       <el-menu-item v-if="userInfo != ''" index="5"
-        ><router-link to="#">{{
-          userInfo.username
-        }}</router-link></el-menu-item
+        ><router-link to="#">{{ userInfo.username }}</router-link></el-menu-item
       >
 
       <el-menu-item index="6" v-if="userInfo == ''" style="margin-left: -10px"
