@@ -31,10 +31,15 @@ export const getFlower = () => {
 
 //获取详细页面的花图片
 export const getFlowerview = () => {
-    return requests({ url: "/flower/", method: "get" });
+    return requests({ url: "/flowerview/", method: "get" });
 };
 
 //获取用户购物车信息
 export const getUserCar = (data) => {
     return requests({ url: "/ShopCart/", method: "post", data });
 };
+
+//插入购物车
+export const addCart = (data) => {
+    return requests({ url: "/ShopCart/addCart", method: "post", data });
+}

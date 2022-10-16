@@ -26,31 +26,31 @@
         <h3>
           <router-link class="a1" to="#">Love with Flower</router-link>
           <span>Give to the people you care about</span>
-          
         </h3>
       </div>
       <div class="card">
         <div class="card1">
           <img class="pic" src="./pic/home_floor_lover.png" alt="" />
           <div class="jianshi">
-            <router-link to="/xiangxi">
-              <div class="grid-container">
+            <div class="grid-container">
               <div v-for="i in this.flowerInfo" :key="i.id">
-                <div class="bj">
-                  <img class="img1" :src="i.picUrl" alt="" />
-                  <div class="miaoshu">
-                    {{ i.fname }}
-                    <div
-                      class="miaoshu"
-                      style="margin-top: 5%; font-size: 25px"
-                    >
-                      {{ i.price }}
+                <router-link :to="{name:'xiangxi', query: {id:i.id,picUrl:i.picUrl,fname:i.fname,price:i.price,fdescribe:i.fdescribe}}">
+                  <div class="bj">
+                    <img class="img1" :src="i.picUrl" alt="" />
+                    <div class="miaoshu">
+                      {{ i.fname }}
+                      <div
+                        class="miaoshu"
+                        style="margin-top: 5%; font-size: 25px"
+                      >
+                        {{ i.price }}
+                        <div style="display: none">{{i.fdescribe}}</div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </router-link>
               </div>
             </div>
-            </router-link>
           </div>
         </div>
       </div>
@@ -64,7 +64,9 @@ import { getFlower } from "@/api";
 export default {
   data() {
     return {
-      flowerInfo: [],
+      flowerInfo: {
+        
+      },
     };
   },
   created() {
@@ -119,7 +121,7 @@ export default {
 }
 .card {
   width: 100%;
-  height: 1000px;
+  height: 900px;
   background-color: #f7f9fa;
   margin-bottom: 5%;
 }

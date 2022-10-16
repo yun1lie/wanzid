@@ -7,7 +7,7 @@
       @select="handleSelect"
     >
       <el-menu-item index="1" style="margin-left: 5%">
-        <router-link to="/">首页</router-link>
+        <router-link to="/">HomePage</router-link>
       </el-menu-item>
       <!-- <el-menu-item style="margin-left: 55%" index="2"
         ><a href="https://www.ele.me" target="_blank">订单查询</a></el-menu-item

@@ -1,5 +1,6 @@
 package com.shop.florist.mapper;
 
+import com.shop.florist.entity.ShoppingCart;
 import com.shop.florist.entity.User;
 import org.apache.ibatis.annotations.*;
 
@@ -28,4 +29,6 @@ public interface UserMapper {
     //查询管理员用户
     @Select("select * from users where users.id = 0}")
     List<User> selectAdmin(User user);
+
+
 }

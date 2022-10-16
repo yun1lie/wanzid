@@ -24,4 +24,15 @@ public class ShoppingCartController {
 
         return shoppingCartMapper.findCar(user);
     }
+
+    //购物车插入一条
+    @PostMapping("/addCart")
+    public int insertCart(@RequestBody ShoppingCart shoppingCart) {
+        try {
+            return shoppingCartMapper.insertCart(shoppingCart);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return 0;
+    }
 }

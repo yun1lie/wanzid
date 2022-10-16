@@ -1,41 +1,33 @@
 <template>
   <div class="ShoppingCart">
     <daohang></daohang>
-    <el-table
-      ref="multipleTable"
-      :data="tableData"
-      tooltip-effect="dark"
-      style="width: 100%"
-    >
-      <el-table-column type="selection" width="55"> </el-table-column>
-      <!-- <el-table-column  label="Trade name" width="120">
+    <div class="shop">
+      <el-table
+        ref="multipleTable"
+        :data="tableData"
+        tooltip-effect="dark"
+        style="width: 100%;margin-top: 5%"
+      >
+        <el-table-column type="selection" width="55"> </el-table-column>
+        <!-- <el-table-column  label="Trade name" width="120">
         <template slot-scope="scope">{{ scope.row.date }}</template>
       </el-table-column> -->
-      <el-table-column prop="id" label="flower id" width="120">
-      </el-table-column
-      ><el-table-column prop="fname" label="flower name" width="150">
-      </el-table-column
-      ><el-table-column prop="price" label="Unit Price" width="120">
-      </el-table-column>
-      <el-table-column
-        prop="fdescribe"
-        label="Product description"
-        show-overflow-tooltip
-      >
-      </el-table-column>
-      <!-- <el-table-column label="operation">
-        <template slot-scope="scope">
-          <el-button
-            size="mini"
-            type="danger"
-            @click="handleDelete(scope.$index, scope.row)"
-            >删除</el-button
-          >
-        </template>
-      </el-table-column> -->
-    </el-table>
-    <div>total${{ this.sum }}</div>
-    <el-button>buy</el-button>
+        <el-table-column prop="id" label="flower id" width="120">
+        </el-table-column
+        ><el-table-column prop="fname" label="flower name" width="150">
+        </el-table-column
+        ><el-table-column prop="price" label="Unit Price" width="120">
+        </el-table-column>
+        <el-table-column
+          prop="fdescribe"
+          label="Product description"
+          show-overflow-tooltip
+        >
+        </el-table-column>
+      </el-table>
+      <div class="total">Total: ${{ this.sum }}</div>
+      <div class="but"><el-button icon="el-icon-circle-check" @click="but">Buy</el-button></div>
+    </div>
   </div>
 </template>
 
@@ -56,6 +48,11 @@ export default {
       });
     }
   },
+  methods: {
+    but(){
+      alert("Purchase Successful");
+    }
+  },
   data() {
     return {
       sum: 0,
@@ -67,4 +64,11 @@ export default {
 </script>
 
 <style>
+.total{
+  margin-left: 4%;
+  color: red;
+}
+.but{
+  margin-left: 4%;
+}
 </style>
